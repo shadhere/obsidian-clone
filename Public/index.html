@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obsidian Clone</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    
+    <!-- This example requires Tailwind CSS v3.0+ -->
+    
+    
+      
+      <div
+        class=" bg-black inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+      >
+        
+          <path
+            fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
+            fill-opacity=".3"
+            d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
+          />
+          <defs>
+            <linearGradient
+              id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
+              x1="1155.49"
+              x2="-78.208"
+              y1=".177"
+              y2="474.645"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#9089FC"></stop>
+              <stop offset="1" stop-color="#FF80B5"></stop>
+            </linearGradient>
+          </defs>
+        
+      </div>
+      <div class="px-4 pt-4 lg:px-4s bg-neutral-900 py-4 sticky">
+        <div>
+          <nav class="flex h-9 items-center justify-start content-start" aria-label="Global">
+            <div class="flex lg:min-w-0 lg:flex-1 content-start" aria-label="Global">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+              
+            </div>
+            <div class="flex lg:hidden">
+              <button
+                type="button"
+                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 "
+              >
+                <span class="sr-only">Open main menu</span>
+                <!-- Heroicon name: outline/bars-3 -->
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:gap-x-12 sticky"
+            >
+              <a
+                href="#"
+                class="font-semibold text-gray-300 hover:text-gray-900"
+                >Pricing</a
+              >
+
+              <a
+                href="#"
+                class="font-semibold text-gray-300 hover:text-gray-900"
+                >Mobile</a
+              >
+
+              <a
+                href="#"
+                class="font-semibold text-gray-300 hover:text-gray-900"
+                >Plugins</a
+              >
+
+              <a
+                href="#"
+                class="font-semibold text-gray-300 hover:text-gray-900"
+              >
+                Account</a
+              >
+
+              <a
+                href="#"
+                class="font-semibold text-gray-300 hover:text-gray-900"
+                >Log in</a
+              >
+            </div>
+          </nav>
+        
+        </div>
+      
+          <!-- Mobile menu, show/hide based on menu open state. -->
+          <div role="dialog" aria-modal="true">
+            <div
+              focus="true"
+              class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden"
+            >
+              <div class="flex h-9 items-center justify-between">
+                <div class="flex">
+                  <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <img
+                      class="h-8"
+                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="flex">
+                  <button
+                    type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                  >
+                    <span class="sr-only">Close menu</span>
+                    <!-- Heroicon name: outline/x-mark -->
+                    <svg
+                      class="h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                  <div class="space-y-2 py-6">
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+                      >Pricing
+                    </a>
+
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+                      >Features</a
+                    >
+
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+                      >Marketplace</a
+                    >
+
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+                      >Company</a
+                    >
+                  </div>
+                  <div class="py-6">
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
+                      >Log in</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main>
+        <div class="relative px-6 lg:px-8 bg-neutral-800">
+          <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+            <div>
+              <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                <div
+                  class="bg-local rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20 bg-violet-500"
+                >
+                  <span class="text-white">
+                    New! Obsidian 1.0 is here. Learn more
+                    <a href="#" class="font-semibold text-indigo-600"
+                      ><span class="absolute inset-0" aria-hidden="true"></span
+                      ><span aria-hidden="true">&rarr;</span></a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div>
+                <h1
+                  class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl text-gray-100"
+                >
+                A second brain,
+
+                for you, forever.
+                </h1>
+                <p class="mt-6 text-lg leading-8 text-gray-100 sm:text-center">
+                  Obsidian is a powerful and extensible knowledge base
+that works on top of your local folder of plain text files. 
+                </p>
+                <div class="mt-8 flex gap-x-4 sm:justify-center">
+                  <a
+                    href="#"
+                    class="inline-block rounded-lg bg-violet-500 px-10 py-4 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
+                  >
+                    Get Obsidian for Windows 
+                    
+                    <span class="text-indigo-200" aria-hidden="true"
+                      >&rarr;</span
+                    >
+                    
+                    <br><p class="text-gray-300 text-center">Version 1.3.1</p>
+                  </a>
+                  
+                 
+                </div>
+              </div>
+          
+
+              <div class="h-20 mt-8 bg-neutral-800 flex flex-row justify-center gap-x-4">
+                <div>
+                        <a href="#" >
+                          <img class="h-12" src="/Images/App.svg" alt="Hero"
+                          /></span>
+                        </div>
+                <div>
+                          <a href="#">
+                        <img class="h-12" src="/Images/App.svg" alt="Hero"
+                            />
+                          </div>
+                          </div>
+
+
+
+              
+ 
+
+              <div class="py-10">
+                <img src="/Images/Obsidianhero.png" alt="Hero"
+                           />
+              </div>
+              
+              <div
+                class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+              >
+                <svg
+                  class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
+                  viewBox="0 0 1155 678"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)"
+                    fill-opacity=".3"
+                    d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc"
+                      x1="1155.49"
+                      x2="-78.208"
+                      y1=".177"
+                      y2="474.645"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#9089FC"></stop>
+                      <stop offset="1" stop-color="#FF80B5"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+    <div class="bg-neutral-800 py-4 sm:py-8 lg:py-8">
+      <div class="mx-auto max-w-7xl px-6 lg:px-18">
+        
+
+          <div class="grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
+            <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+              <div class="flex h-12 w-12 items-center justify-center  text-white sm:shrink-0">
+                <!-- Heroicon name: outline/globe-alt -->
+                
+              </div>
+              <div class="sm:min-w-0 sm:flex-1">
+                <p class="text-lg font-semibold leading-8 text-gray-400">I don’t give app of the year awards, but I would 100% give it to Obsidian for slowly taking over almost everything I do that has anything to do with text files. </p>
+                <p class="mt-2 text-base leading-7 text-gray-500">CGP Grey
+                  YouTuber personality</p>
+              </div>
+            </div>
+    
+            <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+              <div class="flex h-12 w-12 items-center justify-center  text-white sm:shrink-0">
+                <!-- Heroicon name: outline/scale -->
+                
+              </div>
+              <div class="sm:min-w-0 sm:flex-1">
+                <p class="text-lg font-semibold leading-8 text-gray-400">Being so extensible and personalizable, Obsidian is, quite simply, a dream come true for Markdown writers. </p>
+                <p class="mt-2 text-base leading-7 text-gray-500">Federico Viticci @viticci
+                  Founder of MacStories</p>
+              </div>
+            </div>
+    
+            <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+              <div class="flex h-12 w-12 items-center justify-center  text-white sm:shrink-0">
+                <!-- Heroicon name: outline/bolt -->
+                
+              </div>
+              <div class="sm:min-w-0 sm:flex-1">
+                <p class="text-lg font-semibold leading-8 text-gray-400">Obsidian looks good, works great, and most importantly, I own and control my data. </p>
+                <p class="mt-2 text-base leading-7 text-gray-500">Gonçalo Silva @goncalossilva
+                  CTO of Doist, the company behind Todoist</p>
+              </div>
+            </div>
+    
+            <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+              <div class="flex h-12 w-12 items-center justify-center  text-white sm:shrink-0">
+                <!-- Heroicon name: outline/device-phone-mobile -->
+                
+              </div>
+              <div class="sm:min-w-0 sm:flex-1">
+                <p class="text-lg font-semibold leading-8 text-gray-400">Obsidian is my current choice for writing and organizing notes on any complicated subject. Feels like the closest anyone has come yet to realizing the promise of hypertext as a tool of thought. </p>
+                <p class="mt-2 text-base leading-7 text-gray-500">Graydon Hoare
+                  Creator of the Rust programming language</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative px-6 lg:px-8 bg-neutral-800">
+      <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+        
+           
+   
+      <h1
+        class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl text-gray-100"
+      >Everything is connected</h1>
+      <P class="mt-6 text-lg leading-8 text-gray-100 sm:text-center">The human brain is non-linear: we jump from idea to idea, all the time. Your second brain should work the same.
+
+        In Obsidian, making and following connections is frictionless. Tend to your notes like a gardener; at the end of the day, sit back and marvel at your own knowledge graph. </P>
+        
+        
+        
+        
+      </div>
+    </div>
+
+<div class=" flex flex-col items-center space-y-4 px-216 lg:px-8 bg-neutral-800 mx-auto">
+  
+
+  <div class="flex flex-col bg-neutral-900 px-10 max-w-sm py-6 border border-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 max-w-3xl">
+    <div class="flex flex-row justify-center">
+    
+    <div class="">
+    <img class="h-12 w-14 px-1 mt-3" src="/Images/globe.png" alt="Hero"
+    />
+    </div>
+    <div><h2 class="text-center text-3xl mt-4 text-gray-100 uppercase"> Graph view</h2>
+    </div>
+    </div>
+    <div>
+    <p class="mt-6 text-lg justify-center text-gray-100 sm:text-center">The graph is your knowledge at a glance. Explore, observe, and stay motivated. With group, filter, and display options, see things your way.
+      Local graph shows connections around you. Get inspired while writing. </p>
+    
+    </div>
+</div>
+
+ 
+
+<div class="flex flex-col bg-neutral-900 px-10 max-w-sm py-6 border border-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 max-w-3xl">
+  <div class="flex flex-row justify-center">
+  
+  <div class="">
+  <img class="h-12 w-14 px-1 mt-3" src="/Images/backlink.png" alt="Hero"
+  />
+  </div>
+  <div><h2 class="text-center text-3xl mt-4 text-gray-100 uppercase"> Backlinks</h2>
+  </div>
+  </div>
+  <div>
+  <p class="mt-6 text-lg justify-center text-gray-100 sm:text-center">Converge your thoughts.
+    Broaden your view to see this note in other contexts. Link relevant pages with one click. </p>
+  
+  </div>
+</div>
+
+<div class="flex flex-col bg-neutral-900 px-10 max-w-sm py-6 border border-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 max-w-3xl">
+  <div class="flex flex-row justify-center">
+  
+  <div class="">
+  <img class="h-12 w-14 px-1 mt-3" src="/Images/outgoing-link.png" alt="Hero"
+  />
+  </div>
+  <div><h2 class="text-center text-3xl mt-4 text-gray-100 uppercase">Outgoing links</h2>
+  </div>
+  </div>
+  <div>
+  <p class="mt-6 text-lg justify-center text-gray-100 sm:text-center"> Diverge your thoughts.
+    See all existing and potential links from this note. Turn mentions into links with one click. </p>
+  
+  </div>
+  </div>
+
+ 
+      
+
+   
+
+<div class="relative px-6 lg:px-8 bg-neutral-800">
+  <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+    
+       
+
+  <h1
+    class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl text-gray-100"
+  >Extensively extensible</h1>
+  <P class="mt-6 text-lg leading-8 text-gray-100 sm:text-center">Note-taking is incredibly personal. Tried every app, but something always irks you? You deserve better.
+
+    For those who can't custom-build a solution for themselves, Obsidian is as close as you can get, with plugins, themes, and custom CSS at your disposal.</P>
+    
+    
+    
+    
+  </div>
+</div>
+
+<div class=" flex flex-col items-center space-y-4 px-216 lg:px-8 bg-neutral-800 mx-auto">
+
+  <div class="flex flex-col bg-neutral-900 px-10 max-w-sm py-6 border border-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 max-w-3xl">
+    <div class="flex flex-row justify-center">
+    
+    <div class="">
+    <img class="h-12 w-14 px-1 mt-3" src="/Images/cubes.svg" alt="Hero"
+    />
+    </div>
+    <div><h2 class="text-center text-3xl mt-4 text-gray-100 uppercase">Your knowledge building blocks</h2>
+    </div>
+    </div>
+    <div>
+    <p class="mt-6 text-lg justify-center text-gray-100 sm:text-center"> Obsidian is built to be extensible from the ground up. We want you to build your own system, play with it, tweak it, until you're happy.
+      Obsidian is a versatile toolbox: with 25 core plugins, 724 community plugins, and 143 themes, plus custom styling, you can tweak Obsidian to work and look exactly how you want it. </p>
+    
+    </div>
+    </div>
+
+
+<div class="flex flex-col bg-neutral-900 px-10 max-w-sm py-6 border border-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 max-w-3xl">
+  <div class="flex flex-row justify-center">
+  
+  <div class="">
+  <img class="h-12 w-14 px-1 mt-3" src="/Images/plugin.png" alt="Hero"
+  />
+  </div>
+  <div><h2 class="text-center text-3xl mt-4 text-gray-100 uppercase">Mix and matchy</h2>
+  </div>
+  </div>
+  <div>
+  <p class="mt-6 text-lg justify-center text-gray-100 sm:text-center"> Some community plugins do a single thing extremely well, like Calendar and Kanban. Others unlock endless possibilities: Dataview and Templater are great examples.
+    They are super easy to grab: the built-in plugin marketplace lets you install them with one click. And the sum of the parts is greater than the whole: some plugins work even better together. </p>
+  
+  </div>
+  </div>
+
+
+<div class="flex flex-col bg-neutral-900 px-10 max-w-sm py-6 border border-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 max-w-3xl">
+  <div class="flex flex-row justify-center">
+  
+  <div class="">
+  <img class="h-12 w-14 px-1 mt-3" src="/Images/crafting.svg" alt="Hero"
+  />
+  </div>
+  <div><h2 class="text-center text-3xl mt-4 text-gray-100 uppercase">Do It Yourself</h2>
+  </div>
+  </div>
+  <div>
+  <p class="mt-6 text-lg justify-center text-gray-100 sm:text-center"> Looking for something unique? There's no need to wait for someone else to make it! Whether you have programming experience or not, you can try your hands at making your Obsidian plugin.
+    All community plugins are available on GitHub if you like to study them. Our developer community is also here to help! </p>
+  
+  </div>
+  </div>
+
+<div class="relative px-6 lg:px-8 bg-neutral-800">
+  <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+    
+       
+
+  <h1
+    class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl text-gray-100"
+  >Notes for your grandchildren</h1>
+  <P class="mt-6 text-lg leading-8 text-gray-100 sm:text-center">In our age when cloud services can shut down, get bought, or change privacy policy any day, the last thing you want is proprietary format and data lock-in.
+
+    With Obsidian, your data sits in a local folder. Never leave your life's work held hostage in the cloud again.</P>
+    
+    
+    
+    
+  </div>
+</div>
+
+<div class="flex flex-col bg-neutral-900 px-10 max-w-sm py-6 border border-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 max-w-3xl">
+  <div class="flex flex-row justify-center">
+  
+  <div class="">
+  <img class="h-12 w-14 px-1 mt-3" src="/Images/gem.svg" alt="Hero"
+  />
+  </div>
+  <div><h2 class="text-center text-3xl mt-4 text-gray-100 uppercase">Future-proof format</h2>
+  </div>
+  </div>
+  <div>
+  <p class="mt-6 text-lg justify-center text-gray-100 sm:text-center"> Obsidian uses Markdown. Markdown is widely used by sites like Reddit and GitHub and not going away anytime soon.
+    Markdown is designed to be human readable. It's not obfuscated by encoding; you can directly edit the source files with Markdown editors, or edit them automatically with scripts. </p>
+  
+
+  </div>
+</div>
+
+
+
+<div class="flex flex-col bg-neutral-900 px-10 max-w-sm py-6 border border-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 max-w-3xl">
+  <div class="flex flex-row justify-center">
+  
+  <div class="">
+  <img class="h-12 w-14 px-1 mt-3" src="/Images/disk.svg" alt="Hero"
+  />
+  </div>
+  <div><h2 class="text-center text-3xl mt-4 text-gray-100 uppercase">Total control</h2>
+  </div>
+  </div>
+  <div>
+  <p class="mt-6 text-lg justify-center text-gray-100 sm:text-center">Your notes live on your device, period. You can encrypt them or back them up however you want; it's your decision, not ours.
+    Plain text files let you do various sync, encryption, and data processing on top of it. Obsidian plays nice with Dropbox, Cryptomator, and any software that works with plain text files. </p>
+  
+  </div>
+  </div>
+
+
+  
+
+<div class="flex flex-col bg-neutral-900 px-10 max-w-sm py-6 border border-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 max-w-3xl">
+  <div class="flex flex-row justify-center">
+  
+  <div class="">
+  <img class="h-12 w-14 px-1 mt-3" src="/Images/camper.svg" alt="Hero"
+  />
+  </div>
+  <div><h2 class="text-center text-3xl mt-4 text-gray-100 uppercase">Always available</h2>
+  </div>
+  </div>
+  <div>
+  <p class="mt-6 text-lg justify-center text-gray-100 sm:text-center">No internet? No problem. Obsidian works completely offline, internet or service issues will never be your problem.
+    Enjoy reading and working on your notes anytime, anywhere. </p>
+  
+  </div>
+  </div>
+<div class="relative px-6 lg:px-8 bg-neutral-800">
+  <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+    
+       
+
+  <h1
+    class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl text-gray-100"
+  >Vibrant community</h1>
+  <P class="mt-6 text-lg leading-8 text-gray-100 sm:text-center">With more than 70,000 members in our Discord chat and 35,000 members on our forum, Obsidian has one of the largest note-taking communities.
+
+    Our community welcomes anyone who uses Obsidian or is interested in Obsidian, no matter your language, country, or field. Come join us!</P>
+    
+    
+    
+    
+  </div>
+</div>
+
+<div class="flex flex-col bg-neutral-900 px-10 max-w-sm py-6 border border-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 max-w-3xl">
+  <div class="flex flex-row justify-center">
+  
+  <div class="">
+  <img class="h-12 w-14 px-1 mt-3" src="/Images/book.svg" alt="Hero"
+  />
+  </div>
+  <div><h2 class="text-center text-3xl mt-4 text-gray-100 uppercase">International community</h2>
+  </div>
+  </div>
+  <div>
+  <p class="mt-6 text-lg justify-center text-gray-100 sm:text-center">Obsidian is translated in to 22 languages and counting. Our Discord has channels for speakers of many languages—you don't have to talk about Obsidian and ask questions in English! </p>
+  
+  </div>
+  </div>
+<div class="flex flex-col bg-neutral-900 px-10 max-w-sm py-6 border border-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 max-w-3xl">
+  <div class="flex flex-row justify-center">
+  
+  <div class="">
+  <img class="h-12 w-14 px-1 mt-3" src="/Images/anvil.svg" alt="Hero"
+  />
+  </div>
+  <div><h2 class="text-center text-3xl mt-4 text-gray-100 uppercase"> Create together</h2>
+  </div>
+  </div>
+  <div>
+  <p class="mt-6 text-lg justify-center text-gray-100 sm:text-center">Most of the community plugin and theme developers also hang out in our community. Learn together and make something awesome! Teamwork makes the dream work. </p>
+  
+  </div>
+  </div>
+
+
+
+  
+
+<div class="flex flex-col bg-neutral-900 px-10 max-w-sm py-6 border border-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 max-w-3xl">
+<div class="flex flex-row justify-center">
+
+<div class="">
+<img class="h-12 w-14 px-1 mt-3" src="/Images/globe.png" alt="Hero"
+/>
+</div>
+<div><h2 class="text-center text-3xl mt-4 text-gray-100 uppercase">International community</h2>
+</div>
+</div>
+<div>
+<p class="mt-6 text-lg justify-center text-gray-100 sm:text-center">Obsidian is translated in to 22 languages and counting. Our Discord has channels for speakers of many languages—you don't have to talk about Obsidian and ask questions in English! </p>
+
+</div>
+</div>
+
+
+<div class="relative px-6 lg:px-8 bg-neutral-800">
+  <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+    
+      <div>
+        <h1
+          class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl text-gray-100"
+        >
+        A second brain,
+
+        for you, forever.
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-gray-100 sm:text-center">
+          Obsidian is a powerful and extensible knowledge base
+that works on top of your local folder of plain text files. 
+        </p>
+        <div class="mt-8 flex gap-x-4 sm:justify-center">
+          <a
+            href="#"
+            class="inline-block rounded-lg bg-violet-500 px-10 py-4 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
+          >
+            Get Obsidian for Windows 
+            
+            <span class="text-indigo-200" aria-hidden="true"
+              >&rarr;</span
+            >
+            
+            <br><p class="text-gray-300 text-center">Version 1.3.1</p>
+          </a>
+         
+        </div>
+      </div>
+
+      <div class="h-20 py-20 bg-neutral-800 flex flex-row justify-center gap-x-4">
+<div>
+        <a href="#" >
+          <img class="h-12" src="/Images/App.svg" alt="Hero"
+          /></span>
+        </div>
+<div>
+          <a href="#">
+        <img class="h-12" src="/Images/App.svg" alt="Hero"
+            />
+          </div>
+        
+
+
+  
+
+      </div>
+
+
+    
+  </body>
+</html>
